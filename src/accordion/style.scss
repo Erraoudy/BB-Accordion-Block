@@ -1,0 +1,75 @@
+// Editor and front end styles
+.wp-block-bb-accordion {
+	list-style: none;
+    padding: 1px 0 0 0;
+	margin: 0;
+	border: #EAE9ED solid 1px;
+	border-radius: 0.625rem;
+	font-family: 'Poppins', sans-serif;
+	min-width: 48.125rem;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		min-width: unset;
+	}
+	
+	.wp-block-bb-accordion-item {
+	    margin-top: -1px;
+		padding: 1.25rem;
+
+		&:not(:last-child) {
+			border-bottom: #EAE9ED solid 1px;
+		}
+
+		.wp-block-bb-accordion-item-header {
+		    margin: 0;
+		    padding: 0;
+		
+			.wp-block-bb-accordion-item-header-button {
+			    all: unset;
+			    align-items: center;
+			    box-sizing: border-box;
+			    cursor: pointer;
+			    display: flex;
+			    justify-content: space-between;
+			    outline: revert;
+			    width: 100%;
+				flex-direction: row;
+			
+				.wp-block-bb-accordion-item-header-button-text {
+				    flex: auto;
+					font-weight: 400;
+					font-size: 1.5rem;
+					line-height: 2rem;
+				}
+				[class^=wp-block-bb-accordion-item-header-button-icon] {
+				    display: flex;
+				    margin: 0 0.75rem;
+				}
+			}
+		}
+		.wp-block-bb-accordion-item-panel {
+		    margin: 0;
+		    max-height: 0;
+		    overflow: hidden;
+			
+			&[hidden] {
+				display: none;
+			}
+			&.open {
+			    max-height: 100vh;
+			    overflow: auto;
+			    visibility: visible;
+			}
+
+			p{
+				margin-top: 0.75rem;
+				margin-bottom: 0;
+				font-family: 'Poppins', sans-serif;
+				font-weight: 400;
+				font-size: 1.25rem;
+				line-height: 1.875rem;
+			}
+		}
+	}
+}
